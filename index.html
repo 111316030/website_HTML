@@ -6,6 +6,7 @@
     <title>我的個人網站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" href="./images/Favicon.ico">
     
     <style>
         /* 自定義 CSS 區塊 */
@@ -17,7 +18,7 @@
         /* 首頁 Hero 區塊設定為全螢幕高度 */
         #home {
             height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 這裡可以換成你的背景圖 */
+            background: linear-gradient(135deg, #f5f7fa 0%, #5a6b88 100%); /* 這裡可以換成你的背景圖 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,6 +36,11 @@
             object-fit: cover;
             background-color: #e9ecef; /* 圖片載入前的底色 */
         }
+
+        .zoom-effect:hover {
+            transform: scale(1.05); /* 放大 1.05 倍 */
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +56,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">技能與專長 (其他)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Tech Stack</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">聯絡我</a></li>
                 </ul>
             </div>
@@ -97,34 +103,73 @@
             <div class="row g-4">
                 
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250?text=Project+1" class="card-img-top" alt="作品名稱">
-                        <div class="card-body">
-                            <h5 class="card-title">[作品名稱 1]</h5>
-                            <p class="card-text">[作品簡介：使用了什麼技術？解決了什麼問題？]</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                    <div class="card h-100 shadow-sm border-0">
+                        <div role="button" data-bs-toggle="modal" data-bs-target="#singlePhoto1" class="overflow-hidden rounded">
+                            <img src="./images/hw1.png" 
+                                class="card-img-top zoom-effect" 
+                                alt="作品封面"
+                                style="cursor: pointer; transition: transform 0.3s;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">GenType</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div role="button" data-bs-toggle="modal" data-bs-target="#photoProject1" class="overflow-hidden rounded">
+                            <img src="./images/hw2/main.png" 
+                                 class="card-img-top zoom-effect" 
+                                 alt="作品封面"
+                                 style="cursor: pointer; transition: transform 0.3s;">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">從 AI 商品到廣告文案</h5>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250?text=Project+2" class="card-img-top" alt="作品名稱">
+                        <img src="https://www.aiva.ai/assets/img/aiva_logo_2.png" class="card-img-top" alt="作品名稱">
                         <div class="card-body">
-                            <h5 class="card-title">[作品名稱 2]</h5>
-                            <p class="card-text">[作品簡介：簡單描述功能亮點。]</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                            <h5 class="card-title">AIVA</h5>
+                            <p class="card-text">the AI Music Generation Assistant</p>
+                            <a href="https://creators.aiva.ai/publicPlayer?c=68eca5b0eb46ca7727edfca7" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/400x250?text=Project+3" class="card-img-top" alt="作品名稱">
+                        <img src="https://cdn2.suno.ai/image_large_6386302e-7a06-4980-94df-9864a6315392.jpeg" class="card-img-top" alt="作品名稱">
                         <div class="card-body">
-                            <h5 class="card-title">[作品名稱 3]</h5>
-                            <p class="card-text">[作品簡介：這裡可以放更多細節。]</p>
-                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                            <h5 class="card-title">Suno AI</h5>
+                            <p class="card-text">獨一無二的音樂創作</p>
+                            <a href="https://suno.com/s/K804x7KKRnixWKmd" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://i.ytimg.com/an_webp/KpqsmN9yDuE/mqdefault_6s.webp?du=3000&sqp=CK_78ckG&rs=AOn4CLCJn7m7wmDaOtn4c3puqajKXVkxkA" class="card-img-top" alt="作品名稱">
+                        <div class="card-body">
+                            <h5 class="card-title">多媒體短片創作</h5>
+                            <p class="card-text">照著排少Fly High的分鏡剪的</p>
+                            <a href="https://youtu.be/KpqsmN9yDuE?si=VdHcVVldi6NdJGzj" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/8/88/Java_logo.png/250px-Java_logo.png" class="card-img-top" alt="作品名稱">
+                        <div class="card-body">
+                            <h5 class="card-title">Java作業</h5>
+                            <p class="card-text">湊數的，雖然是認真的作業</p>
+                            <a href="https://github.com/SmallLava/Java-Homework" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
                         </div>
                     </div>
                 </div>
@@ -189,8 +234,8 @@
 
                     <div class="text-center mt-5">
                         <p>或者透過社群媒體找到我</p>
-                        <a href="https://x.com/miodaisuki0528" class="text-dark me-3 fs-3"><i class="bi bi-twitter"></i></a>
-                        <a href="https://github.com/SmallLava" class="text-dark fs-3"><i class="bi bi-github"></i></a>
+                        <a href="https://x.com/SmallLava" class="text-dark me-3 fs-3"><i class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/111316030" class="text-dark fs-3"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -204,5 +249,64 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="singlePhoto1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body p-0 text-center bg-dark">
+                    <img src="./images/hw1.png" class="img-fluid" alt="完整作品">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="photoProject1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <h5 class="modal-title">作品集展示</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body p-0">
+                    <div id="carouselPhotoExample" class="carousel slide" data-bs-ride="carousel">
+                    
+                        <div class="carousel-inner">
+                        
+                            <div class="carousel-item active">
+                                <img src="./images/hw2/pic1.JPG" class="d-block w-100" alt="照片1">
+                            </div>
+                        
+                            <div class="carousel-item">
+                                <img src="./images/hw2/pic2.JPG" class="d-block w-100" alt="照片2">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./images/hw2/pic3.JPG" class="d-block w-100" alt="照片3">
+                            </div>
+
+                        </div>
+                    
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhotoExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPhotoExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
