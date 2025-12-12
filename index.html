@@ -1,164 +1,208 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
-    <title>XXX's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* 自定義 CSS 區塊 */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding-top: 56px; /* 為了不被固定的導覽列擋住內容 */
+        }
+        
+        /* 首頁 Hero 區塊設定為全螢幕高度 */
+        #home {
+            height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 這裡可以換成你的背景圖 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 讓所有區塊上下都有呼吸空間 */
+        section {
+            padding: 80px 0;
+        }
+
+        /* 作品集圖片預設高度，確保排版整齊 */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            background-color: #e9ecef; /* 圖片載入前的底色 */
+        }
+    </style>
 </head>
 <body>
-    <!-- 頁頭區 -->
-    <header>
-        <h1>XXX 的個人部落格</h1>
-        <nav>
-            <a href="#section1">關於我</a>
-            <a href="#section2">工作經歷</a>
-            <a href="#section3">工作技能</a>
-            <a href="#section4">音樂作品</a>
-            <a href="#section5">視訊作品</a>
-            <a href="#section6">圖片作品</a>
-            <a href="#section7">更多資訊</a>
-        </nav>
-    </header>
-    
-    <!-- 主內容區 -->
-    <main>
-        <!-- 側邊欄補充資訊 -->
-        <aside style="width:30%; float:right;">
-            <blockquote>
-                <h3>學習小貼士</h3>
-                <p>記得提前預習課程內容，並查詢相關資料以加深理解。</p>
-            </blockquote>
-        </aside>
 
-        <!-- 個人介紹 -->
-        <article id="section1">
-            <header>
-                <h2>關於我</h2>
-                <p>在此部落格中，將分享我在工作上及生活中的點滴。</p>
-            </header>
-            <section>
-                <table cellspacing="20">
-                    <tr>
-                        <td><img src="assets/images/SL photo.jpg" alt="Steven picture"></td>
-                        <td><h1>Steven</h1><p>
-                            <em><strong><a href="https://www.ntue.edu.tw/">國立台北教育大學</a></strong>助理教授</em></p></td>
-                    </tr>
-                </table>
-            </section>
-            <section>
-                <p>我是一位大學教授，專注教授<mark>人工智慧</mark> 和 <mark>Python 程式設計</mark>，並致力於 <mark>深度學習</mark> 與 <mark>生成式 AI </mark>在教育及工程應用上的創新研究與應用，並熱愛分享知識，鼓勵學生在學術與實踐中成長，追求卓越。</p>
-                <p>此外，我也熱愛旅遊、音樂與閱讀，希望將藝術與科技結合，為教學與研究注入更多元的靈感與視野。</p>
-            </section>
-        </article>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">陳祐宇</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">技能與專長 (其他)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <!-- 工作經歷介紹 -->
-        <article id="section2">
-            <header>
-                <h2>工作經歷</h2>
-            </header>
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Dates</th>
-                            <th>Work</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2018-2024</td>
-                            <td>國立台北教育大學資訊科學系</td>
-                        </tr>
-                        <tr>
-                            <td>2018-2024</td>
-                            <td>XX科技公司執行長</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </article>
+    <section id="home">
+        <div class="container">
+            <h1 class="display-4 fw-bold">你好，我是陳祐宇</h1>
+            <p class="lead text-secondary my-4">一名熱愛程式設計的後端工程師</p>
+            <a href="#portfolio" class="btn btn-primary btn-lg">查看我的作品</a>
+            <a href="#contact" class="btn btn-outline-dark btn-lg ms-2">聯絡我</a>
+        </div>
+    </section>
 
-        <!-- 技能介紹 -->
-        <article id="section3">
-            <header>
-                <h2>工作技能</h2>
-            </header>
-            <section>
-                <table>
-                    <tr>
-                        <td>Java</td>
-                        <td>⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>C++</td>
-                        <td>⭐⭐⭐</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>⭐⭐⭐⭐⭐</td>
-                    </tr>
-                </table>
-            </section>
-        </article>
+    <section id="about" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">關於我</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center">
+                    <img src=./images/profile.png alt="個人照片" class="img-fluid rounded-circle shadow mb-4 mb-md-0">
+                </div>
+                <div class="col-md-7">
+                    <h3>還是個學生</h3>
+                    <p class="lead">Coding既是工作也是生活，目前致力於NTUE-App開發</p>
+                    <p>「能用程式解決的為甚麼要自己來」</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <i class="bi bi-geo-alt-fill text-primary"></i> <strong>居住地:</strong> 新北市
+                        </div>
+                        <div class="col-6">
+                            <i class="bi bi-envelope-fill text-primary"></i> <strong>Email:</strong> s111316030@stu.ntue.edu.tw
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- 音樂作品介紹 -->
-        <article id="section4">
-            <h2>音訊介紹</h2>
-            <audio controls>
-                <!-- 改為你的作品 -->
-                <source src="assets/audio/Whispers in the Trees 1.mp3" type="audio/mpeg">
-            </audio>
-        </article>
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="text-center mb-5">作品集</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Project+1" class="card-img-top" alt="作品名稱">
+                        <div class="card-body">
+                            <h5 class="card-title">[作品名稱 1]</h5>
+                            <p class="card-text">[作品簡介：使用了什麼技術？解決了什麼問題？]</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 視訊作品介紹 -->
-        <article id="section5">
-            <h2>視訊介紹</h2>
-            <video controls width="300">
-                <!-- 改為你的作品 -->
-                <source src="assets/video/Whispers in the Trees 1.mp4" type="audio/mpeg">                
-            </video>
-            &nbsp;&nbsp;<!-- 添加間隔 -->
-            <video controls width="300">
-                <!-- 改為你的作品 -->
-                <source src="assets/video/Rise Up and Shine.mp4" type="video/mp4">
-            </video>
-        </article>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Project+2" class="card-img-top" alt="作品名稱">
+                        <div class="card-body">
+                            <h5 class="card-title">[作品名稱 2]</h5>
+                            <p class="card-text">[作品簡介：簡單描述功能亮點。]</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 圖片作品集介紹與描述 -->
-        <article id="section6">
-            <h2>旅行照片集</h2>
-            <figure style="display:inline-block;">
-                <!-- 改為你的作品 -->
-                <img src="assets/images/mountain.jpg" alt="山間風景" width="450">
-                <figcaption>壯麗的山景</figcaption>
-            </figure>
-            <figure style="display:inline-block;">
-                <!-- 改為你的作品 -->
-                <img src="assets/images/village.jpg" alt="小鎮景色" width="450">
-                <figcaption>寧靜的小鎮</figcaption>
-            </figure>
-        </article>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Project+3" class="card-img-top" alt="作品名稱">
+                        <div class="card-body">
+                            <h5 class="card-title">[作品名稱 3]</h5>
+                            <p class="card-text">[作品簡介：這裡可以放更多細節。]</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank">查看專案</a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 嵌入PDF文件 -->
-        <article id="section7">
-            <h2>更多資訊</h2>
-            <!-- 改為你的作品 -->
-            <embed src="assets/pdf/llm models.pdf" width="500" height="600">
-        </article>
+            </div>
+        </div>
+    </section>
 
-        <!-- 互動元素 -->
-        <details>
-            <summary>點擊查看學習提示</summary>
-            <p>建議攜帶筆記本與筆，方便隨時記錄課堂中的關鍵知識點與靈感。</p>
-        </details>
+    <section id="skills" class="bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-5">Tech Stack</h2>
+            <p class="mb-5">說不上專精，但以下技術多有接觸</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-light rounded">
+                        <i class="bi bi-code-slash fs-1"></i>
+                        <h4 class="mt-3">後端開發</h4>
+                        <p class="small">Dart, C++, Java, Python</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-light rounded">
+                        <i class="bi bi-camera fs-1"></i>
+                        <h4 class="mt-3">繪畫/設計</h4>
+                        <p class="small">Clip studio, Procreate, Premiere</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-4 border border-light rounded">
+                        <i class="bi bi-people fs-1"></i>
+                        <h4 class="mt-3">團隊合作</h4>
+                        <p class="small">Git Flow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- 加入地圖 -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784024338266!2d121.54206247541927!3d25.02462437782254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1731827435609!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
-    </main>
-    
-    <!-- 頁尾區 -->
-    <footer>
-        <p>聯絡我們：contact@personalblog.com</p>
-        <time datetime="2024-11-17">最後更新日期：2024年11月17日</time>
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">聯絡我</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">您的姓名</label>
+                            <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">電子信箱</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">留言內容</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="有什麼想告訴我的嗎？"></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">發送訊息</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-5">
+                        <p>或者透過社群媒體找到我</p>
+                        <a href="https://x.com/miodaisuki0528" class="text-dark me-3 fs-3"><i class="bi bi-twitter"></i></a>
+                        <a href="https://github.com/SmallLava" class="text-dark fs-3"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 陳祐宇. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
